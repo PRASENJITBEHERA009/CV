@@ -5,97 +5,214 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Prasenjit Behera CV</title>
+  <title>Prasenjit Portfolio</title>
 
-  <style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    body{
-
-      min-height:100vh;
-
-      display:flex;
-      justify-content:center;
-      align-items:center;
-
-      padding:25px;
-
-      font-family:Arial, sans-serif;
-
-      background:linear-gradient(
-      135deg,
-      #dbe7e7,
-      #cfe0e0,
-      #dfeeee
-      );
-
-    }
-
-    .cv-container{
-
-      width:100%;
-      max-width:1200px;
-
-      background:#ffffff;
-
-      border-radius:22px;
-
-      overflow:hidden;
-
-      box-shadow:
-      0 10px 30px rgba(0,0,0,0.12),
-      0 0 80px rgba(0,0,0,0.05);
-
-      transition:0.3s;
-
-    }
-
-    .cv-container:hover{
-
-      transform:translateY(-3px);
-
-    }
-
-    .cv-container img{
-
-      width:100%;
-      display:block;
-      object-fit:contain;
-
-    }
-
-    @media(max-width:768px){
-
-      body{
-
-        padding:12px;
-
-      }
-
-      .cv-container{
-
-        border-radius:18px;
-
-      }
-
-    }
-
-  </style>
-
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
 
-  <div class="cv-container">
+  <!-- HEADER -->
 
-    <img src="PRASENJIT BEHERA RESUMNE_page-0001.jpg" alt="Prasenjit Behera Resume">
+  <header class="header">
 
-  </div>
+    <nav class="navbar">
+
+      <div class="logo">
+        Prasenjit<span>.</span>
+      </div>
+
+      <ul class="nav-menu" id="navMenu">
+
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+
+      </ul>
+
+      <div class="menu-icon" id="menuIcon">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+    </nav>
+
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <h3>Hello, I'm</h3>
+
+      <h1>Prasenjit Behera</h1>
+
+      <h2>Computer Science Diploma Student</h2>
+
+      <p>
+        Passionate web developer and programmer with
+        knowledge of Java, Python, HTML, CSS, and JavaScript.
+      </p>
+
+      <div class="hero-btns">
+
+        <a href="#contact" class="btn btn1">
+          Contact Me
+        </a>
+
+        <a href="#skills" class="btn btn2">
+          My Skills
+        </a>
+
+      </div>
+
+      <div class="socials">
+
+        <a href="#">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+
+        <a href="#">
+          <i class="fab fa-github"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- IMAGE -->
+
+    <div class="hero-image">
+
+      <div class="image-box">
+
+        <!-- YOUR PHOTO -->
+        <img src="profile.jpg" alt="Prasenjit">
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section id="about" class="section">
+
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about-box">
+
+      <p>
+        I am a Computer Science diploma student and aspiring software
+        developer who loves building responsive websites and modern projects.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- SKILLS -->
+
+  <section class="skills section" id="skills">
+
+    <h2 class="section-title">Skills</h2>
+
+    <div class="grid">
+
+      <div class="card">
+
+        <i class="fa-brands fa-java"></i>
+
+        <h3>Java</h3>
+
+        <p>OOP & DSA</p>
+
+      </div>
+
+      <div class="card">
+
+        <i class="fa-brands fa-python"></i>
+
+        <h3>Python</h3>
+
+        <p>Programming Projects</p>
+
+      </div>
+
+      <div class="card">
+
+        <i class="fa-brands fa-html5"></i>
+
+        <h3>Frontend</h3>
+
+        <p>HTML CSS JavaScript</p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section class="section" id="contact">
+
+    <h2 class="section-title">Contact</h2>
+
+    <div class="contact-box">
+
+      <form id="contactForm">
+
+        <input type="text"
+          placeholder="Your Name"
+          required>
+
+        <input type="email"
+          placeholder="Your Email"
+          required>
+
+        <textarea rows="6"
+          placeholder="Your Message"
+          required></textarea>
+
+        <button type="submit">
+          Send Message
+        </button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 Prasenjit Behera
+    </p>
+
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
 
 </body>
 
