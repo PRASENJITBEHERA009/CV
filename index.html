@@ -2,107 +2,181 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Prasenjit Portfolio</title>
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
 
-  <!-- CSS -->
+  <title>
+    Prasenjit Behera | Portfolio
+  </title>
+
+  <!-- MAIN CSS -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Font Awesome -->
+  <!-- FONT AWESOME -->
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- Google Font -->
+  <!-- AOS ANIMATION CSS -->
+  <link rel="stylesheet"
+    href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+  <!-- GOOGLE FONT -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
+
 </head>
 
 <body>
 
-  <!-- HEADER -->
+  <!-- =========================
+       HEADER
+  ========================== -->
 
   <header class="header">
 
     <nav class="navbar">
 
+      <!-- LOGO -->
+
       <div class="logo">
+
         Prasenjit<span>.</span>
+
       </div>
 
-      <ul class="nav-menu" id="navMenu">
+      <!-- NAVIGATION -->
 
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <ul class="nav-menu"
+        id="navMenu">
+
+        <li>
+          <a href="#home">Home</a>
+        </li>
+
+        <li>
+          <a href="#about">About</a>
+        </li>
+
+        <li>
+          <a href="#skills">Skills</a>
+        </li>
+
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
+
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
 
       </ul>
 
-      <div class="menu-icon" id="menuIcon">
+      <!-- MOBILE MENU -->
+
+      <div class="menu-icon"
+        id="menuIcon">
+
         <i class="fa-solid fa-bars"></i>
+
       </div>
 
     </nav>
 
   </header>
 
-  <!-- HERO -->
+  <!-- =========================
+       HERO SECTION
+  ========================== -->
 
-  <section class="hero" id="home">
+  <section class="hero"
+    id="home">
 
-    <div class="hero-content">
+    <!-- LEFT CONTENT -->
 
-      <h3>Hello, I'm</h3>
+    <div class="hero-content"
+      data-aos="fade-right">
 
-      <h1>Prasenjit Behera</h1>
+      <h3>
+        Hello, I'm
+      </h3>
 
-      <h2>Computer Science Diploma Student</h2>
+      <h1>
+        Prasenjit Behera
+      </h1>
+
+      <h2>
+        Computer Science Diploma Student
+      </h2>
 
       <p>
-        Passionate web developer and programmer with
-        knowledge of Java, Python, HTML, CSS, and JavaScript.
+
+        Passionate web developer and programmer
+        with knowledge of Java, Python,
+        HTML, CSS, JavaScript and modern
+        responsive website development.
+
       </p>
+
+      <!-- BUTTONS -->
 
       <div class="hero-btns">
 
-        <a href="#contact" class="btn btn1">
+        <a href="#contact"
+          class="btn btn1">
+
           Contact Me
+
         </a>
 
-        <a href="#skills" class="btn btn2">
+        <a href="#skills"
+          class="btn btn2">
+
           My Skills
+
         </a>
 
       </div>
 
+      <!-- SOCIAL -->
+
       <div class="socials">
 
-        <a href="#">
+        <a href="https://linkedin.com"
+          target="_blank">
+
           <i class="fab fa-linkedin-in"></i>
+
         </a>
 
-        <a href="#">
+        <a href="https://github.com"
+          target="_blank">
+
           <i class="fab fa-github"></i>
+
         </a>
 
-        <a href="#">
+        <a href="mailto:example@gmail.com">
+
           <i class="fa-solid fa-envelope"></i>
+
         </a>
 
       </div>
 
     </div>
 
-    <!-- IMAGE -->
+    <!-- HERO IMAGE -->
 
-    <div class="hero-image">
+    <div class="hero-image"
+      data-aos="zoom-in">
 
       <div class="image-box">
 
-        <!-- YOUR PHOTO -->
-        <img src="prasenjit.jpeg" alt="Prasenjit">
+        <img src="prasenjit.jpeg"
+          alt="Prasenjit Behera">
 
       </div>
 
@@ -110,58 +184,97 @@
 
   </section>
 
-  <!-- ABOUT -->
+  <!-- =========================
+       ABOUT SECTION
+  ========================== -->
 
-  <section id="about" class="section">
+  <section id="about"
+    class="section">
 
-    <h2 class="section-title">About Me</h2>
+    <h2 class="section-title"
+      data-aos="fade-up">
 
-    <div class="about-box">
+      About Me
+
+    </h2>
+
+    <div class="about-box"
+      data-aos="fade-up">
 
       <p>
-        I am a Computer Science diploma student and aspiring software
-        developer who loves building responsive websites and modern projects.
+
+        I am a Computer Science diploma student
+        and aspiring software developer who
+        enjoys building responsive websites,
+        solving coding problems and learning
+        new technologies.
+
       </p>
 
     </div>
 
   </section>
 
-  <!-- SKILLS -->
+  <!-- =========================
+       SKILLS SECTION
+  ========================== -->
 
-  <section class="skills section" id="skills">
+  <section class="skills section"
+    id="skills">
 
-    <h2 class="section-title">Skills</h2>
+    <h2 class="section-title"
+      data-aos="fade-up">
+
+      My Skills
+
+    </h2>
 
     <div class="grid">
 
-      <div class="card">
+      <!-- CARD -->
+
+      <div class="card"
+        data-aos="fade-up">
 
         <i class="fa-brands fa-java"></i>
 
         <h3>Java</h3>
 
-        <p>OOP & DSA</p>
+        <p>
+          OOP Concepts & DSA
+        </p>
 
       </div>
 
-      <div class="card">
+      <!-- CARD -->
+
+      <div class="card"
+        data-aos="fade-up"
+        data-aos-delay="100">
 
         <i class="fa-brands fa-python"></i>
 
         <h3>Python</h3>
 
-        <p>Programming Projects</p>
+        <p>
+          Projects & Problem Solving
+        </p>
 
       </div>
 
-      <div class="card">
+      <!-- CARD -->
+
+      <div class="card"
+        data-aos="fade-up"
+        data-aos-delay="200">
 
         <i class="fa-brands fa-html5"></i>
 
         <h3>Frontend</h3>
 
-        <p>HTML CSS JavaScript</p>
+        <p>
+          HTML CSS JavaScript
+        </p>
 
       </div>
 
@@ -169,13 +282,95 @@
 
   </section>
 
-  <!-- CONTACT -->
+  <!-- =========================
+       PROJECT SECTION
+  ========================== -->
 
-  <section class="section" id="contact">
+  <section class="section"
+    id="projects">
 
-    <h2 class="section-title">Contact</h2>
+    <h2 class="section-title"
+      data-aos="fade-up">
 
-    <div class="contact-box">
+      Projects
+
+    </h2>
+
+    <div class="grid">
+
+      <!-- PROJECT -->
+
+      <div class="card"
+        data-aos="zoom-in">
+
+        <i class="fa-solid fa-globe"></i>
+
+        <h3>
+          Portfolio Website
+        </h3>
+
+        <p>
+          Responsive personal portfolio website.
+        </p>
+
+      </div>
+
+      <!-- PROJECT -->
+
+      <div class="card"
+        data-aos="zoom-in"
+        data-aos-delay="100">
+
+        <i class="fa-solid fa-lock"></i>
+
+        <h3>
+          Password Manager
+        </h3>
+
+        <p>
+          Java based password manager project.
+        </p>
+
+      </div>
+
+      <!-- PROJECT -->
+
+      <div class="card"
+        data-aos="zoom-in"
+        data-aos-delay="200">
+
+        <i class="fa-solid fa-gamepad"></i>
+
+        <h3>
+          Snake Game
+        </h3>
+
+        <p>
+          Python game development project.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       CONTACT SECTION
+  ========================== -->
+
+  <section class="section"
+    id="contact">
+
+    <h2 class="section-title"
+      data-aos="fade-up">
+
+      Contact Me
+
+    </h2>
+
+    <div class="contact-box"
+      data-aos="fade-up">
 
       <form id="contactForm">
 
@@ -192,7 +387,9 @@
           required></textarea>
 
         <button type="submit">
+
           Send Message
+
         </button>
 
       </form>
@@ -201,18 +398,42 @@
 
   </section>
 
-  <!-- FOOTER -->
+  <!-- =========================
+       FOOTER
+  ========================== -->
 
   <footer>
 
     <p>
+
       © 2026 Prasenjit Behera
+      | All Rights Reserved
+
     </p>
 
   </footer>
 
-  <!-- JS -->
+  <!-- =========================
+       SCRIPT JS
+  ========================== -->
+
   <script src="script.js"></script>
+
+  <!-- AOS ANIMATION JS -->
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <script>
+
+    AOS.init({
+
+      duration:1000,
+
+      once:true
+
+    });
+
+  </script>
 
 </body>
 
