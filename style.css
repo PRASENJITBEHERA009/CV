@@ -639,3 +639,75 @@ footer{
     font-size:36px;
   }
 }
+/* =========================
+   NAME ANIMATION
+========================= */
+
+.name-animation{
+
+  position:relative;
+
+  display:inline-block;
+
+  font-size:65px;
+
+  font-weight:800;
+
+  color:white;
+
+  animation:
+  fadeSlide 1.2s ease forwards,
+  glowText 3s infinite alternate;
+
+  opacity:0;
+}
+
+/* SLIDE ANIMATION */
+
+@keyframes fadeSlide{
+
+  0%{
+
+    opacity:0;
+
+    transform:
+    translateY(80px);
+  }
+
+  100%{
+
+    opacity:1;
+
+    transform:
+    translateY(0);
+  }
+}
+
+/* GLOW EFFECT */
+
+@keyframes glowText{
+
+  0%{
+
+    text-shadow:
+    0 0 5px rgba(255,255,255,0.1),
+    0 0 10px rgba(56,189,248,0.2);
+  }
+
+  100%{
+
+    text-shadow:
+    0 0 10px rgba(56,189,248,0.5),
+    0 0 20px rgba(56,189,248,0.8),
+    0 0 35px rgba(56,189,248,1);
+  }
+}
+
+/* LETTER SPACING EFFECT */
+
+.name-animation:hover{
+
+  letter-spacing:2px;
+
+  transition:0.4s;
+}
