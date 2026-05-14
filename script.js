@@ -1,3 +1,6 @@
+// ==========================
+// MOBILE MENU
+// ==========================
 
 const menuIcon =
 document.getElementById("menuIcon");
@@ -5,29 +8,35 @@ document.getElementById("menuIcon");
 const navMenu =
 document.getElementById("navMenu");
 
-menuIcon.addEventListener("click",()=>{
+if(menuIcon && navMenu){
 
-  navMenu.classList.toggle("active");
+  menuIcon.addEventListener("click",()=>{
 
-  const icon =
-  menuIcon.querySelector("i");
+    navMenu.classList.toggle("active");
 
-  if(navMenu.classList.contains("active")){
+    const icon =
+    menuIcon.querySelector("i");
 
-    icon.classList.remove("fa-bars");
+    if(navMenu.classList.contains("active")){
 
-    icon.classList.add("fa-xmark");
+      icon.classList.remove("fa-bars");
 
-  }else{
+      icon.classList.add("fa-xmark");
 
-    icon.classList.remove("fa-xmark");
+    }else{
 
-    icon.classList.add("fa-bars");
-  }
+      icon.classList.remove("fa-xmark");
 
-});
+      icon.classList.add("fa-bars");
+    }
 
+  });
+
+}
+
+// ==========================
 // CLOSE MENU AFTER CLICK
+// ==========================
 
 const navLinks =
 document.querySelectorAll(".nav-menu a");
@@ -36,14 +45,20 @@ navLinks.forEach((link)=>{
 
   link.addEventListener("click",()=>{
 
-    navMenu.classList.remove("active");
+    if(navMenu){
 
-    const icon =
-    menuIcon.querySelector("i");
+      navMenu.classList.remove("active");
+    }
 
-    icon.classList.remove("fa-xmark");
+    if(menuIcon){
 
-    icon.classList.add("fa-bars");
+      const icon =
+      menuIcon.querySelector("i");
+
+      icon.classList.remove("fa-xmark");
+
+      icon.classList.add("fa-bars");
+    }
 
   });
 
@@ -56,17 +71,21 @@ navLinks.forEach((link)=>{
 const contactForm =
 document.getElementById("contactForm");
 
-contactForm.addEventListener("submit",(e)=>{
+if(contactForm){
 
-  e.preventDefault();
+  contactForm.addEventListener("submit",(e)=>{
 
-  alert(
-  "Thank You! Your message has been submitted."
-  );
+    e.preventDefault();
 
-  contactForm.reset();
+    alert(
+    "Thank You! Your message has been submitted."
+    );
 
-});
+    contactForm.reset();
+
+  });
+
+}
 
 // ==========================
 // TYPING ANIMATION
@@ -75,61 +94,67 @@ contactForm.addEventListener("submit",(e)=>{
 const typingText =
 document.querySelector(".typing");
 
-const words = [
+if(typingText){
 
-  "Web Developer",
-  "Programmer",
-  "Java Developer",
-  "Frontend Developer"
+  const words = [
 
-];
+    "Web Developer",
+    "Programmer",
+    "Java Developer",
+    "Frontend Developer"
 
-let wordIndex = 0;
+  ];
 
-let charIndex = 0;
+  let wordIndex = 0;
 
-let isDeleting = false;
+  let charIndex = 0;
 
-function typeEffect(){
+  let isDeleting = false;
 
-  const currentWord =
-  words[wordIndex];
+  function typeEffect(){
 
-  if(!isDeleting){
+    const currentWord =
+    words[wordIndex];
 
-    typingText.textContent =
-    currentWord.substring(0,charIndex++);
+    if(!isDeleting){
 
-    if(charIndex >
-      currentWord.length){
+      typingText.textContent =
+      currentWord.substring(0,charIndex++);
 
-      isDeleting = true;
+      if(charIndex >
+        currentWord.length){
 
-      setTimeout(typeEffect,1000);
+        isDeleting = true;
 
-      return;
+        setTimeout(typeEffect,1000);
+
+        return;
+      }
+
+    }else{
+
+      typingText.textContent =
+      currentWord.substring(0,charIndex--);
+
+      if(charIndex < 0){
+
+        isDeleting = false;
+
+        wordIndex =
+        (wordIndex + 1) %
+        words.length;
+      }
     }
 
-  }else{
-
-    typingText.textContent =
-    currentWord.substring(0,charIndex--);
-
-    if(charIndex < 0){
-
-      isDeleting = false;
-
-      wordIndex =
-      (wordIndex + 1) %
-      words.length;
-    }
+    setTimeout(
+      typeEffect,
+      isDeleting ? 60 : 120
+    );
   }
 
-  setTimeout(typeEffect,
-    isDeleting ? 60 : 120);
-}
+  typeEffect();
 
-typeEffect();
+}
 
 // ==========================
 // DARK MODE TOGGLE
@@ -138,30 +163,34 @@ typeEffect();
 const themeToggle =
 document.getElementById("themeToggle");
 
-themeToggle.addEventListener("click",()=>{
+if(themeToggle){
 
-  document.body.classList.toggle(
-    "dark-mode"
-  );
+  themeToggle.addEventListener("click",()=>{
 
-  const icon =
-  themeToggle.querySelector("i");
+    document.body.classList.toggle(
+      "dark-mode"
+    );
 
-  if(document.body.classList.contains(
-    "dark-mode")){
+    const icon =
+    themeToggle.querySelector("i");
 
-    icon.classList.remove("fa-moon");
+    if(document.body.classList.contains(
+      "dark-mode")){
 
-    icon.classList.add("fa-sun");
+      icon.classList.remove("fa-moon");
 
-  }else{
+      icon.classList.add("fa-sun");
 
-    icon.classList.remove("fa-sun");
+    }else{
 
-    icon.classList.add("fa-moon");
-  }
+      icon.classList.remove("fa-sun");
 
-});
+      icon.classList.add("fa-moon");
+    }
+
+  });
+
+}
 
 // ==========================
 // HEADER SHADOW ON SCROLL
@@ -172,25 +201,30 @@ document.querySelector(".header");
 
 window.addEventListener("scroll",()=>{
 
-  if(window.scrollY > 50){
+  if(header){
 
-    header.style.boxShadow =
-    "0 5px 20px rgba(0,0,0,0.25)";
+    if(window.scrollY > 50){
 
-  }else{
+      header.style.boxShadow =
+      "0 5px 20px rgba(0,0,0,0.25)";
 
-    header.style.boxShadow = "none";
+    }else{
+
+      header.style.boxShadow =
+      "none";
+    }
+
   }
 
 });
 
 // ==========================
-// SCROLL REVEAL ANIMATION
+// SCROLL REVEAL
 // ==========================
 
 const revealElements =
 document.querySelectorAll(
-".card, .about-box, .contact-box"
+".card, .about-box, .contact-box, .education-card"
 );
 
 const revealOnScroll = ()=>{
@@ -206,7 +240,10 @@ const revealOnScroll = ()=>{
     if(elementTop <
       windowHeight - 80){
 
-      element.classList.add("show");
+      element.style.opacity = "1";
+
+      element.style.transform =
+      "translateY(0)";
     }
 
   });
@@ -222,3 +259,44 @@ window.addEventListener(
 "load",
 revealOnScroll
 );
+
+// ==========================
+// SMOOTH ACTIVE NAVBAR
+// ==========================
+
+window.addEventListener("scroll",()=>{
+
+  const sections =
+  document.querySelectorAll("section");
+
+  const navLinks =
+  document.querySelectorAll(".nav-menu a");
+
+  let current = "";
+
+  sections.forEach((section)=>{
+
+    const sectionTop =
+    section.offsetTop;
+
+    if(pageYOffset >=
+      sectionTop - 200){
+
+      current =
+      section.getAttribute("id");
+    }
+
+  });
+
+  navLinks.forEach((link)=>{
+
+    link.classList.remove("active");
+
+    if(link.href.includes(current)){
+
+      link.classList.add("active");
+    }
+
+  });
+
+});
