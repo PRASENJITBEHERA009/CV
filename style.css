@@ -20,11 +20,8 @@ html{
 }
 
 body{
-
   background:#f6fff8;
-
   color:#1b4332;
-
   overflow-x:hidden;
 }
 
@@ -587,13 +584,45 @@ body{
   background:#f8fffb;
 }
 
+/* CERTIFICATE CARD */
+
+#certificates .card{
+
+  background:white;
+
+  padding:20px;
+
+  border-radius:20px;
+
+  text-align:center;
+
+  overflow:hidden;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+  transition:0.4s;
+}
+
+#certificates .card:hover{
+
+  transform:translateY(-10px);
+}
+
+/* CERTIFICATE IMAGE */
+
 .certificate-img{
 
   width:100%;
 
-  height:220px;
+  height:auto;
 
-  object-fit:cover;
+  max-height:500px;
+
+  object-fit:contain;
+
+  background:white;
+
+  padding:10px;
 
   border-radius:15px;
 
@@ -608,19 +637,27 @@ body{
 
 .certificate-img:hover{
 
-  transform:scale(1.03);
+  transform:scale(1.02);
 
   border-color:#1b4332;
 }
 
+/* CERTIFICATE TEXT */
+
 #certificates .card h3{
 
   color:#081c15;
+
+  font-size:24px;
+
+  margin-bottom:10px;
 }
 
 #certificates .card p{
 
   color:#475569;
+
+  line-height:1.7;
 }
 
 /* =========================
@@ -847,5 +884,10 @@ footer{
   .section{
 
     padding:80px 6%;
+  }
+
+  .certificate-img{
+
+    max-height:350px;
   }
 }
