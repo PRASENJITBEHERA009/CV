@@ -166,41 +166,6 @@ body{
 }
 
 /* =========================
-   THEME TOGGLE
-========================= */
-
-.theme-toggle{
-
-  width:45px;
-  height:45px;
-
-  border-radius:50%;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  background:rgba(255,255,255,0.1);
-
-  color:white;
-
-  cursor:pointer;
-
-  transition:0.4s;
-}
-
-.theme-toggle:hover{
-
-  background:var(--secondary);
-
-  color:#081c15;
-
-  transform:rotate(180deg);
-}
-
-/* =========================
    HERO SECTION
 ========================= */
 
@@ -240,10 +205,6 @@ body{
 
   margin-bottom:10px;
 }
-
-/* =========================
-   NAME ANIMATION
-========================= */
 
 .name-animation{
 
@@ -596,47 +557,6 @@ body{
   overflow:hidden;
 
   box-shadow:0 10px 30px rgba(0,0,0,0.08);
-
-  animation:fadeUp 1s ease;
-}
-
-@keyframes fadeUp{
-
-  from{
-
-    opacity:0;
-
-    transform:translateY(40px);
-  }
-
-  to{
-
-    opacity:1;
-
-    transform:translateY(0);
-  }
-}
-
-.card::before{
-
-  content:"";
-
-  position:absolute;
-
-  top:0;
-  left:-100%;
-
-  width:100%;
-  height:100%;
-
-  background:rgba(82,183,136,0.08);
-
-  transition:0.5s;
-}
-
-.card:hover::before{
-
-  left:0;
 }
 
 .card:hover{
@@ -659,20 +579,48 @@ body{
 }
 
 /* =========================
-   SKILLS SECTION
+   CERTIFICATE SECTION
 ========================= */
 
-.skills{
+#certificates{
 
-  background:linear-gradient(
-  135deg,
-  #081c15,
-  #1b4332);
+  background:#f8fffb;
 }
 
-.skills .section-title{
+.certificate-img{
 
-  color:white;
+  width:100%;
+
+  height:220px;
+
+  object-fit:cover;
+
+  border-radius:15px;
+
+  margin-bottom:20px;
+
+  border:4px solid #52b788;
+
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+
+  transition:0.4s;
+}
+
+.certificate-img:hover{
+
+  transform:scale(1.03);
+
+  border-color:#1b4332;
+}
+
+#certificates .card h3{
+
+  color:#081c15;
+}
+
+#certificates .card p{
+
+  color:#475569;
 }
 
 /* =========================
@@ -727,11 +675,6 @@ body{
   font-weight:700;
 
   margin-bottom:15px;
-}
-
-.education-card h3{
-
-  margin-bottom:10px;
 }
 
 /* =========================
@@ -810,42 +753,6 @@ footer{
   text-align:center;
 
   padding:25px;
-}
-
-/* =========================
-   DARK MODE
-========================= */
-
-body.dark-mode{
-
-  background:#020617;
-
-  color:white;
-}
-
-body.dark-mode .about-box,
-body.dark-mode .card,
-body.dark-mode .contact-box,
-body.dark-mode .education-card{
-
-  background:#1e293b;
-
-  color:white;
-}
-
-body.dark-mode .section-title{
-
-  color:white;
-}
-
-body.dark-mode input,
-body.dark-mode textarea{
-
-  background:#0f172a;
-
-  color:white;
-
-  border:1px solid #334155;
 }
 
 /* =========================
